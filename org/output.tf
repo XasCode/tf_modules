@@ -5,5 +5,5 @@ output "path" {
 
 output "name" {
   description = "The name of the organization resource. Its format is organizations/{org_id}."
-  value = data.google_organization.org.org_id
+  value = data.google_organization.org.name
 }
