@@ -7,7 +7,7 @@ resource "google_project" "project" {
     billing_account     = var.billing_account
     folder_id           = var.parent.name
     labels              = {}
-    name                = "${var.name}"
+    name                = var.name
     project_id          = "${var.name}-${random_id.project.hex}"
     timeouts {}
 }
