@@ -1,6 +1,6 @@
 output "path" {
   description = "The path of this project."
-  value = "${join("", [var.parent.path, var.name])}|/|"
+  value = "${join("", [module.prj_container.path, var.name])}|/|"
 }
 
 output "name" {
