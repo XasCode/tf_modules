@@ -10,3 +10,7 @@ variable "parent" {
     name = string
   })
 }
+
+variable "billing_account" {
+  type = string
+}
