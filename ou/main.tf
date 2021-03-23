@@ -28,7 +28,7 @@ module "security" {
 
   billing_account = var.billing_account
 }
-
+/*
 module "snapshots" {
  source = "github.com/xascode/tf_modules//project?ref=v0.1.0-alpha.4"
   
@@ -40,3 +40,4 @@ module "snapshots" {
 
   billing_account = var.billing_account
 }
+*/
