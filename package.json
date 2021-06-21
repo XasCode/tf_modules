@@ -1,0 +1,21 @@
+{
+  "name": "tf_modules",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bump": "npm version patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xascode/tf_modules.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xascode/tf_modules/issues"
+  },
+  "homepage": "https://github.com/xascode/tf_modules#readme"
+}
