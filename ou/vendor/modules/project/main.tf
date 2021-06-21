@@ -3,7 +3,7 @@ resource "random_id" "project" {
 }
 
 module "prj_container" {
-  source = "./vendor/modules/folder"
+  source = "github.com/xascode/modules/folder"
   
   name   = var.name
   parent = var.parent

@@ -1,12 +1,12 @@
 module "ou" {
-  source = "github.com/xascode/modules//folder?ref=v0.1.0-alpha.6"
+  source = "./vendor/modules/folder"
   
   name   = var.name
   parent = var.parent
 }
 
 module "terraform" {
-  source = "github.com/xascode/tf_modules//project?ref=v0.1.0-alpha.6"
+  source = "./vendor/modules/project"
   
   name   = "terraform"
   parent = {
@@ -18,7 +18,7 @@ module "terraform" {
 }
 
 module "security" {
-  source = "github.com/xascode/tf_modules//project?ref=v0.1.0-alpha.6"
+  source = "./vendor/modules/project"
   
   name   = "security"
   parent = {
@@ -30,7 +30,7 @@ module "security" {
 }
 
 module "snapshots" {
- source = "github.com/xascode/tf_modules//project?ref=v0.1.0-alpha.6"
+ source = "./vendor/modules/project"
   
   name   = "snapshots"
   parent = {

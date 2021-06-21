@@ -1,0 +1,8 @@
+{
+  "project": {
+    "source": "https://github.com/xascode/tf_modules.git//project?ref=v0.1.0-alpha.6"
+  },
+  "folder": {
+    "source": "https://github.com/xascode/tf_modules.git//folder?ref=v0.1.0-alpha.6"
+  }
+}

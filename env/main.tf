@@ -1,5 +1,5 @@
 module "env" {
-  source = "github.com/xascode/modules/folder"
+  source = "./vendor/modules/folder"
   
   name   = var.name
   parent = var.parent
