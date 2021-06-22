@@ -22,7 +22,7 @@ module "terraform" {
   envs   = var.envs
   environment    = var.environment
 
-  depends_on = [modlule.ou]
+  depends_on = [module.ou]
 }
 
 module "security" {
