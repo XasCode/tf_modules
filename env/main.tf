@@ -5,5 +5,5 @@ module "env" {
   parent = var.parent
 
   envs        = var.envs
-  enviornment = var.enviornment
+  environment = var.environment
 }
