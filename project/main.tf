@@ -7,14 +7,18 @@ module "prj_container" {
   
   name   = var.name
   parent = var.parent
+
+  envs         = var.envs
+  environment  = var.environment
 }
 
 resource "google_project" "project" {
-    auto_create_network = false
-    billing_account     = var.billing_account
-    folder_id           = module.prj_container.name
-    labels              = {}
-    name                = var.name
-    project_id          = "${var.name}-${random_id.project.hex}"
-    timeouts {}
+  auto_create_network = false
+  billing_account     = var.billing_account
+  folder_id           = module.prj_container.name
+  labels              = {}
+  name                = var.name
+  project_id          = "${var.name}-${random_id.project.hex}"
+  count               = contains(var.envs, var.environment) ? 1 : 0
+  timeouts {}
 }
