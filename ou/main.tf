@@ -18,6 +18,9 @@ module "terraform" {
   }  
 
   billing_account = var.billing_account
+
+  envs   = var.envs
+  environment    = var.environment
 }
 
 module "security" {
@@ -30,6 +33,9 @@ module "security" {
   }
 
   billing_account = var.billing_account
+
+  envs   = var.envs
+  environment    = var.environment
 }
 
 module "snapshots" {
@@ -42,4 +48,7 @@ module "snapshots" {
   }
 
   billing_account = var.billing_account
+
+  envs   = var.envs
+  environment    = var.environment
 }
