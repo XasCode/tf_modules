@@ -15,7 +15,6 @@ variable "billing_account" {
   type = string
 }
 
-
 variable "envs" {
   type = list(string)
 }

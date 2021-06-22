@@ -19,3 +19,11 @@ variable "billing_account" {
   description = "The account to bill project resources to."
   type = string
 }
+
+variable "envs" {
+  type = list(string)
+}
+
+variable "environment" {
+  type = string
+}
