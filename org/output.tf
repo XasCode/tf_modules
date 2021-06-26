@@ -1,6 +1,6 @@
 output "path" {
   description = "Root path from organization name."
-  value = "${join("|/|", reverse(split(".", var.name)))}|/|"
+  value = "${join("/", reverse(split(".", var.name)))}/"
 }
 
 output "name" {
