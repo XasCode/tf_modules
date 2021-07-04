@@ -11,7 +11,11 @@ output "name" {
 output "projects" {
   value = [
     module.terraform,
-    module.snapshots,
-    module.security
+  ]
+}
+
+output "folders" {
+  value = [
+    module.ou,
   ]
 }
