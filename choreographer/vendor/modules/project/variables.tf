@@ -1,11 +1,3 @@
-variable "organization_name" {
-  type = string
-}
-
-variable "organization_id" {
-  type = string
-}
-
 variable "name" {
   description = "Project name."
   type        = string
@@ -36,33 +28,17 @@ variable "environment" {
   type = string
 }
 
-variable "tf_org" {
-  type = string
-}
-
-variable "tf_token" {
-  type = string
-}
-
-variable "gh_org" {
-  type = string
-}
-
-variable "gh_token" {
-  type = string
-}
-
-variable "build" {
-  type = string
-}
-
-variable "managed" {
-  type = list(
-    object({
-      path   = string
-      name   = string
-      id     = string
-      number = string
-    })
-  )
+variable "snapshots" {
+  type = object({
+    days_in_cycle = number
+    start_time = string
+    max_retention_days = number
+    storage_locations = list(string)
+  })
+  default = {
+    days_in_cycle = 1
+    start_time = "00:00"
+    max_retention_days = 4
+    storage_locations = ["us"]
+  }
 }
