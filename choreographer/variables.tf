@@ -28,10 +28,6 @@ variable "billing_account" {
   type = string
 }
 
-variable "envs" {
-  type = list(string)
-}
-
 variable "environment" {
   type = string
 }
@@ -57,12 +53,66 @@ variable "build" {
 }
 
 variable "managed" {
-  type = list(
-    object({
-      path   = string
-      name   = string
-      id     = string
-      number = string
+  type = object({
+    path   = string
+    name   = string
+    id     = string
+    number = string
+  })
+}
+
+variable "projects" {
+  type = object({
+    sa   = object({
+      name       = string
+      number     = string
+      id         = string
+      project_id = string
     })
-  )
+    repo = object({
+      name       = string
+      number     = string
+      id         = string
+      project_id = string
+    })
+    domain = object({
+      name       = string
+      number     = string
+      id         = string
+      project_id = string
+    })
+  })
+}
+
+variable "region" {
+  type = string
+}
+
+variable "canary" {
+  type = bool
+  default = true
+}
+
+variable "sa" {
+  type = object({
+    name  = string
+    email = string
+    key   = string
+  })
+}
+
+variable "oauth_token_id" {
+  type = string
+}
+
+variable "app_type" {
+  type = string
+}
+
+variable "iap_protected" {
+  type = bool
+}
+
+variable "domain_name" {
+  type = string
 }

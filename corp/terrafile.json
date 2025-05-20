@@ -1,0 +1,8 @@
+{
+  "project": {
+    "source": "../project"
+  },
+  "folder": {
+    "source": "../folder"
+  }
+}

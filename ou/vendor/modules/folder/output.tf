@@ -1,6 +1,6 @@
 output "path" {
   description = "The path of this folder"
-  value = "${join("", [var.parent.path, var.name])}/"
+  value = length(google_folder.folder) > 0 ? "${join("", [var.parent.path, var.name])}/" : ""
 }
 
 output "name" {

@@ -4,6 +4,6 @@ output "path" {
 }
 
 output "name" {
-  description = "The name fo the folder. Its format is folders/{folder_id}."
+  description = "The name of the folder. Its format is folders/{folder_id}."
   value = module.env.name
 }
